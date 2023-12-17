@@ -9,7 +9,7 @@ class WeatherForecast {
   }
 
   getWeatherData(location = 'austin') {
-    this.weatherAPI = `https://api.weatherapi.com/v1/forecast.json?key=92c4eba21b164ff5bc3193139232511&q=${location}&days=3&aqi=no&alerts=no`;
+    this.weatherAPI = `https://api.weatherapi.com/v1/forecast.json?key=54b3d70f9baf4594a75192228231712&q=${location}&days=3&aqi=no&alerts=no`;
     return fetch(this.weatherAPI, { mode: 'cors' })
       .then((response) => response.json())
       .then((data) => {
