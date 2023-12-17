@@ -23,14 +23,16 @@ class UserInterface {
     // footer
     this.footerText = createDomElement({ elementTag: 'span', className: 'footer-text' });
     this.footerText.innerHTML = 'Copyright &copy; 2023 Joey Young';
-    this.footerIcon = createDomElement({ elementTag: 'img', className: 'footer-icon', attr: { src: '../images/GitHub.png' } });
+    this.footerLink = createDomElement({ elementTag: 'a', attr: { href: 'https://github.com/Jqyoung/Weather-App', target: '_blank' } });
+    this.footerIcon = createDomElement({ elementTag: 'img', className: 'footer-icon', attr: { src: '../images/GitHub.png', alt: 'github' } });
 
     this.weatherContainer = createDomElement({ elementTag: 'div', className: 'weather-container' });
     this.toggleButton.append(this.buttonF, this.separator, this.buttonC);
     this.tempToggle.append(this.toggleButton);
     this.header.append(this.tempToggle);
     this.body.append(this.header, this.main, this.footer);
-    this.footer.append(this.footerText, this.footerIcon);
+    this.footerLink.append(this.footerIcon);
+    this.footer.append(this.footerText, this.footerLink);
     this.locationForm.append(this.locationInput, this.locationSubmitBtn);
     this.main.append(this.locationForm, this.weatherContainer);
   }

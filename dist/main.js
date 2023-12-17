@@ -963,7 +963,7 @@ class WeatherForecast {
   }
 
   getWeatherData(location = 'austin') {
-    this.weatherAPI = `http://api.weatherapi.com/v1/forecast.json?key=92c4eba21b164ff5bc3193139232511&q=${location}&days=3&aqi=no&alerts=no`;
+    this.weatherAPI = `https://api.weatherapi.com/v1/forecast.json?key=92c4eba21b164ff5bc3193139232511&q=${location}&days=3&aqi=no&alerts=no`;
     return fetch(this.weatherAPI, { mode: 'cors' })
       .then((response) => response.json())
       .then((data) => {
@@ -1129,14 +1129,16 @@ class UserInterface {
     // footer
     this.footerText = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'span', className: 'footer-text' });
     this.footerText.innerHTML = 'Copyright &copy; 2023 Joey Young';
-    this.footerIcon = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'img', className: 'footer-icon', attr: { src: '../images/GitHub.png' } });
+    this.footerLink = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'a', attr: { href: 'https://github.com/Jqyoung/Weather-App', target: '_blank' } });
+    this.footerIcon = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'img', className: 'footer-icon', attr: { src: '../images/GitHub.png', alt: 'github' } });
 
     this.weatherContainer = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'div', className: 'weather-container' });
     this.toggleButton.append(this.buttonF, this.separator, this.buttonC);
     this.tempToggle.append(this.toggleButton);
     this.header.append(this.tempToggle);
     this.body.append(this.header, this.main, this.footer);
-    this.footer.append(this.footerText, this.footerIcon);
+    this.footerLink.append(this.footerIcon);
+    this.footer.append(this.footerText, this.footerLink);
     this.locationForm.append(this.locationInput, this.locationSubmitBtn);
     this.main.append(this.locationForm, this.weatherContainer);
   }
