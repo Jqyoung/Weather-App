@@ -1,4 +1,6 @@
 import { createDomElement } from './helpers/createDomElement';
+import githubIcon from '../images/GitHub.png';
+import loadingGif from '../images/loading.gif';
 
 class UserInterface {
   constructor() {
@@ -24,7 +26,7 @@ class UserInterface {
     this.footerText = createDomElement({ elementTag: 'span', className: 'footer-text' });
     this.footerText.innerHTML = 'Copyright &copy; 2023 Joey Young';
     this.footerLink = createDomElement({ elementTag: 'a', attr: { href: 'https://github.com/Jqyoung/Weather-App', target: '_blank' } });
-    this.footerIcon = createDomElement({ elementTag: 'img', className: 'footer-icon', attr: { src: '../images/GitHub.png', alt: 'github' } });
+    this.footerIcon = createDomElement({ elementTag: 'img', className: 'footer-icon', attr: { src: githubIcon, alt: 'github' } });
 
     this.weatherContainer = createDomElement({ elementTag: 'div', className: 'weather-container' });
     this.toggleButton.append(this.buttonF, this.separator, this.buttonC);
@@ -241,7 +243,7 @@ class UserInterface {
   displayLoadingScreen = () => {
     const loadingBackdrop = createDomElement({ elementTag: 'div', className: 'backdrop' });
     const loadingModal = createDomElement({ elementTag: 'div', className: 'loading' });
-    const loadingAnimation = createDomElement({ elementTag: 'img', className: 'loading-animation', attr: { src: '../images/loading.gif' } });
+    const loadingAnimation = createDomElement({ elementTag: 'img', className: 'loading-animation', attr: { src: loadingGif } });
     loadingModal.append(loadingAnimation);
     loadingBackdrop.append(loadingModal);
     this.body.append(loadingBackdrop);

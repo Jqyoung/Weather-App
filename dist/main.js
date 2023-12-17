@@ -1104,6 +1104,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   UserInterface: () => (/* binding */ UserInterface)
 /* harmony export */ });
 /* harmony import */ var _helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./helpers/createDomElement */ "./src/helpers/createDomElement.js");
+/* harmony import */ var _images_GitHub_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/GitHub.png */ "./images/GitHub.png");
+/* harmony import */ var _images_loading_gif__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/loading.gif */ "./images/loading.gif");
+
+
 
 
 class UserInterface {
@@ -1130,7 +1134,7 @@ class UserInterface {
     this.footerText = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'span', className: 'footer-text' });
     this.footerText.innerHTML = 'Copyright &copy; 2023 Joey Young';
     this.footerLink = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'a', attr: { href: 'https://github.com/Jqyoung/Weather-App', target: '_blank' } });
-    this.footerIcon = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'img', className: 'footer-icon', attr: { src: '../images/GitHub.png', alt: 'github' } });
+    this.footerIcon = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'img', className: 'footer-icon', attr: { src: _images_GitHub_png__WEBPACK_IMPORTED_MODULE_1__, alt: 'github' } });
 
     this.weatherContainer = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'div', className: 'weather-container' });
     this.toggleButton.append(this.buttonF, this.separator, this.buttonC);
@@ -1347,7 +1351,7 @@ class UserInterface {
   displayLoadingScreen = () => {
     const loadingBackdrop = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'div', className: 'backdrop' });
     const loadingModal = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'div', className: 'loading' });
-    const loadingAnimation = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'img', className: 'loading-animation', attr: { src: '../images/loading.gif' } });
+    const loadingAnimation = (0,_helpers_createDomElement__WEBPACK_IMPORTED_MODULE_0__.createDomElement)({ elementTag: 'img', className: 'loading-animation', attr: { src: _images_loading_gif__WEBPACK_IMPORTED_MODULE_2__ } });
     loadingModal.append(loadingAnimation);
     loadingBackdrop.append(loadingModal);
     this.body.append(loadingBackdrop);
@@ -1438,6 +1442,26 @@ module.exports = __webpack_require__.p + "7c8d04cd831df3033c8a.ttf";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "fc2b5060f7accec5cf74.ttf";
+
+/***/ }),
+
+/***/ "./images/GitHub.png":
+/*!***************************!*\
+  !*** ./images/GitHub.png ***!
+  \***************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "5de0643bf1bbf77878ff.png";
+
+/***/ }),
+
+/***/ "./images/loading.gif":
+/*!****************************!*\
+  !*** ./images/loading.gif ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "b54892a67b80d4f64a01.gif";
 
 /***/ }),
 
