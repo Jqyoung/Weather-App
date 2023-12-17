@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": ["airbnb-base", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "no-use-before-define": ["error", { "functions": false }],
+
+    "quotes": ["error", "single"],
+
+    "no-param-reassign": ["error", { "props": false }],
+
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+
+    "max-classes-per-file": ["error", { "ignoreExpressions": true, "max": 2 }]
+  }
+}
