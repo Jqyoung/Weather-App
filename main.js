@@ -1004,8 +1004,6 @@ class WeatherForecast {
     const hour = +localTime.split(':')[0];
     const todayForecast = combinedHours.slice(hour, hour + 24);
     this.weatherToday = todayForecast;
-    console.log(data);
-    console.log(this.weatherToday);
     return this.weatherToday;
   }
 
